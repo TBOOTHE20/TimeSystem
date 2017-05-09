@@ -20,6 +20,8 @@ public class Employee implements java.io.Serializable {
     public Employee() {
 
     }
+    
+      
 
     public Employee(ArrayList<Timeslot> inpListofTimeSlots, ArrayList<String> inpListofSkills, String name) {
         this.myListofTimeSlots = inpListofTimeSlots;
@@ -60,5 +62,14 @@ public class Employee implements java.io.Serializable {
         myListofSkills.add(skill);
 
     }
+    
+    public void addName(String name) {
+
+        //add name
+        this.name =name;
+
+    }
+    
+    
 
 }

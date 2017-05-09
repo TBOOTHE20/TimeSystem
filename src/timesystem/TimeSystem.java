@@ -30,21 +30,25 @@ public class TimeSystem implements java.io.Serializable {
         int[] arrEvilHours = {9, 10, 11, 12, 19, 20};
         String[] arrEvilSkills = {"Butcher", "Saucier", "Baker"};
         Employee Evil = new Employee();
+        Evil.addName("Evil");
 
         String[] arrMiniMeDays = {"T", "W", "F"};
         int[] arrMiniMeHours = {9, 10, 12, 14, 15, 17, 18};
         String[] arrMiniMeSkills = {"Saucier", "Baker"};
         Employee MiniMe = new Employee();
+        MiniMe.addName("MiniMe");
 
         String[] arrNumberTwoDays = {"M", "F"};
         int[] arrNumberTwoHours = {12, 13, 14, 15, 16, 17, 18};
         String[] arrNumberTwoSkills = {"Butcher", "Dishwasher"};
         Employee NumberTwo = new Employee();
+        NumberTwo.addName("NumberTwo");
 
         String[] arrAustinPowerDays = {"T", "R"};
         int[] arrAustinPowerHours = {8, 9, 10, 11, 12, 13, 14};
         String[] arrAustinPowerSkills = {"Baker", "Saucier"};
         Employee AustinPower = new Employee();
+        AustinPower.addName("AustinPower");
 
         buildEmployee(Evil, arrEvilDays, arrEvilHours, arrEvilSkills);
         buildEmployee(MiniMe, arrMiniMeDays, arrMiniMeHours, arrMiniMeSkills);
@@ -68,11 +72,14 @@ public class TimeSystem implements java.io.Serializable {
                 e.addTimeSlot(arrday, arrhours[x]);
             }
         }
-
+        
+        
         for (String arrskill : arrskills) {
             e.addSkill(arrskill);
         }
         return e;
+        
+        
     }
 
     public static void main(String[] args) {
