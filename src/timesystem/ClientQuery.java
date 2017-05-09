@@ -17,6 +17,7 @@ public class ClientQuery {
         String operation = args[0];
         String operation2 = args[1];
         
+        
         String url = "http://localhost/datasel.php";
         String datastring = "op=getEmployee&time=" + operation+"&addSkills="+operation2;
         try {

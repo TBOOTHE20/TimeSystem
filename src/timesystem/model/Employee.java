@@ -15,14 +15,16 @@ public class Employee implements java.io.Serializable {
 
     ArrayList<Timeslot> myListofTimeSlots = new ArrayList();
     ArrayList<String> myListofSkills = new ArrayList();
+    String name;
 
     public Employee() {
 
     }
 
-    public Employee(ArrayList<Timeslot> inpListofTimeSlots, ArrayList<String> inpListofSkills) {
+    public Employee(ArrayList<Timeslot> inpListofTimeSlots, ArrayList<String> inpListofSkills, String name) {
         this.myListofTimeSlots = inpListofTimeSlots;
         this.myListofSkills = inpListofSkills;
+        this.name = name;
 
     }
 

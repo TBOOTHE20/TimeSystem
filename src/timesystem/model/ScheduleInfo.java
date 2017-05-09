@@ -20,5 +20,22 @@ public class ScheduleInfo implements java.io.Serializable {
         myListofEmployeesSchedules.add(e);
 
     } 
-    
+   
+   // get stuff that returns a string day time and skill
+    public String getAvailableStaff(String day, int hour, String skills) {
+
+        String ret ="";
+        for (int i = 0; i < myListofEmployeesSchedules.size(); i++) {
+            
+            Employee ee = myListofEmployeesSchedules.get(i);
+            
+            if (ee.isAvailable(day, hour) && ee.hasSkill(day)) {
+                ret += ee.name;
+            }
+        }
+        return ret;
+    }
 }
+    
+
+    
